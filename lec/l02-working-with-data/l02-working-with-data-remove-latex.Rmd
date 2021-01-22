@@ -442,12 +442,5 @@ export
 This will download the file to your computer's downloads folder.
 
 
-### Parting comic and appology in advance
-
-I am really bad with names - I will do my best to remember your name if you speak with me one on one, but if I mess up please forgive me
-
-```{r, fig.align='center', out.width="50%", echo=FALSE }
-knitr::include_graphics("names.png")
-```
 
 
