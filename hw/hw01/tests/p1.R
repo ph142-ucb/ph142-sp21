@@ -18,7 +18,7 @@ test_that("p1a", {
 })
 
 test_that("p1b", {
-           expect_true(p1 %in% c("rename", 
+           expect_true(p1[1] %in% c("rename", 
                                   "select", 
                                   "arrange", 
                                   "filter", 
