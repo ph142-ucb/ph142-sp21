@@ -26,6 +26,6 @@ test_that("p3b", {
 })
 
 test_that("p3c", {
-           expect_true(names(sleep_small_colon) == c("awake", "brainwt", "bodywt"))
+           expect_true(all(names(sleep_small_colon) == c("awake", "brainwt", "bodywt")))
    print("p3c: Checking sleep_small_colon has the 'awake', 'brainwt', and 'bodywt'")
 })

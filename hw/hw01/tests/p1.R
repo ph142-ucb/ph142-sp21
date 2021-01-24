@@ -9,7 +9,6 @@ cases:
   name: p1b
   points: 1
 name: p1
-
 "
 
 test_that("p1a", {
@@ -18,17 +17,6 @@ test_that("p1a", {
 })
 
 test_that("p1b", {
-           expect_true(p1[1] %in% c("rename", 
-                                  "select", 
-                                  "arrange", 
-                                  "filter", 
-                                  "mutate", 
-                                  "group_by", 
-                                  "summarize",
-                                  "dim",
-                                  "head",
-                                  "names",
-                                  "str"
-                                  ))
-   print("p1b: Checking p1 is one of the accepted functions")
+  expect_true(p1[1] == "dim" & p1[2] == "head" & p1[3] == "names" & p1[4] == "str" )
+  print("p1b: Checking the names of the 4 functions in alphabetical order")
 })
