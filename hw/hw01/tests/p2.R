@@ -26,6 +26,6 @@ test_that("p2b", {
 })
 
 test_that("p2c", {
-           expect_true(names(sleep_small) == c("awake", "brainwt", "bodywt"))
+           expect_true(all(names(sleep_small) == c("awake", "brainwt", "bodywt")))
    print("p2c: Checking sleep_small has the 'awake', 'brainwt', and 'bodywt'")
 })
