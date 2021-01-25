@@ -101,8 +101,8 @@ id_data
 
 ### Example: infectious disease data
 - Note the variables `number_cases` and `percent_cases`
-- What do you want the bar chart to display? What is the x and y variables for 
-a bar chart?
+- What do you want the bar chart to display? 
+- What are the x and y variables for a bar chart?
 
 
 ## Introducing ggplot
@@ -112,7 +112,7 @@ a bar chart?
 - The first line of code below pulls in the ggplot package
 - The second line of code below specifies the `data` set and what goes on the `x` and `y` axes
 
-```{r, fig.height = 4, fig.width = 9.5, echo=FALSE}
+```{r, fig.height = 4, fig.width = 9.5, echo=True}
 library(ggplot2)
 ggplot(id_data, aes(x = disease, y = percent_cases)) 
 ```
@@ -325,7 +325,7 @@ knitr::include_graphics("outlier.png")
 
 ### Visualize quantitative variables over time using time plots
 
-- **Time plots** are a specific subset of line plots where the x variable is time. 
+- **Time plots** are a specific subset of plots where the x variable is time. 
 - Unlike the previous plots, the time plot shows a relationship between two 
 variables: 
     i) a quantitative variable 
