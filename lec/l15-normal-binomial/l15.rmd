@@ -161,10 +161,6 @@ What about expected values(probabilities) for all the outcomes that have only 2 
 
 ## Binomial Distributions
 
-###Binomial Distributions
-
-![Bernoulli](bernouli.png)
-
 ###Binomial Probability Distributions and notation
 - Bernoulli Random Variable: The variable must assume one of two possible mutually exclusive outcomes
 - Each trial of the BRV results in either a success or failure of the event happening
