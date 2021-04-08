@@ -21,11 +21,11 @@ test_that("p9a", {
 })
 
 test_that("p9b", {
-  expect_true(all.equal(conf_int[1], -2.580856, tol = 0.001))
+  expect_true(all.equal(conf_int[1], -2.560568, tol = 0.001))
   print("Checking: value of lowerbound to at least 3 decimals")
 })
 
 test_that("p9c", {
-  expect_true(all.equal(conf_int[2], 3.042679, tol = 0.001))
+  expect_true(all.equal(conf_int[2], 3.062968, tol = 0.001))
   print("Checking: value of upperbound to at least 3 decimals")
 })
