@@ -1,0 +1,116 @@
+---
+title: "PH 142 Quiz 6 Spring 2021"
+author: "Your name here"
+output: word_document
+---
+
+## Instructions
+Return via email as a Word document to ph142@berkeley.edu. Do not handwrite your answers or convert to a PDF. Please highlight your answer(s) for any multiple choice questions and type your answer where indicated for short answer or fill in the blank questions.
+
+```{r, include = F}
+knitr::opts_chunk$set(include = F, echo = F)
+```
+
+
+## Question 1 [1pt]
+**Select all of the following that increase when the sample size increases.** <p>
+
+(a) Type II Error <p>
+(b) Power <p>
+(c) Type I Error <p>
+(d) The size of the observed effect <p>
+(e) None of the above <p>
+
+```{r eval=FALSE, include=FALSE}
+#**Solution**: b, the type II error decreases if n increases, thus the power will increase.
+```
+
+\newpage
+$\pm$
+
+## Question 2 [2pt]
+
+**For babies born at full term, the distribution of birth weight (in grams) is approximately normally distributed with a mean of 3350 grams and a standard deviation of 440 grams. How many babies do we need to measure if we would like to estimate the mean birth weight within** $\pm 20$ **grams with 95% confidence? Write down your calculation steps and round the answer to an integer**. <p>
+
+\
+\
+Your answer here:
+\
+\
+
+```{r eval=FALSE, include=FALSE}
+#**Solution**: moe = 20, sd = 440, n = (1.96*440/20) = 43.12. Therefore 44 are needed.
+```
+
+\newpage
+
+## Question 3 [5pt]
+
+There is a group of 15 patients with a rare congenital disease, which generally causes a reduction in concentration of blood sodium. The mean blood sodium concentration of these 13 cases was 120 mmol/l, with sample standard deviation of 12 mmol/l.
+
+The average concentration in the population is 137 mmol/l with no known standard deviation. We would like to know if the concentration of blood sodium of patients with the disease is significantly smaller than that of people without the disease.
+
+**i) [2 points] What two conditions would you like to check to see if a t-test is a good fit for this data?** <p>
+\
+\
+Your answer here:
+\
+\
+
+```{r eval=FALSE, include=FALSE}
+#**Solution**: Normality of the data, are there any outliers
+```
+
+
+**ii) [1 point] The t-statistics has a t-distribution with ____ degrees of freedom. ** <p>
+\
+\
+Your answer here:
+\
+\
+
+```{r eval=FALSE, include=FALSE}
+#**Solution**: n-1 = 12
+```
+
+
+**iii) [2 points] Calculate the t-statistics and round your answer to two decimal places. ** <p>
+\
+\
+Your answer here:
+\
+\
+
+```{r eval=FALSE, include=FALSE}
+#**Solution**: t = (120 - 137)/(12/sqrt(13)) = -5.11
+```
+
+
+\newpage
+
+## Question 4 [2 points] 
+
+**Select all of the true statements below**
+
+(a) Standard error = $\frac{\sigma}{\sqrt{n}}$ where $n$ is the sample size and $\sigma$ is the standard deviation. \
+(b) Standard error can be larger than the standard deviation. \
+(c) Standard error describes the variability of the sample means compared to the population means \
+(d) Standard deviation describes the dispersion or spread of the data relative to its mean \
+(e) As n gets larger, the distribution of $\bar{x}$ approaches a Normal distribution with mean $\mu$ and standard deviation $\sigma$ \
+
+
+```{r}
+# Solution: A, C, D
+
+#suggested rubric: ful credit for selecting three correct choices and no others
+# 1.5 pts for making one mistake (1 additional selected or one not selected)
+# 1 pt for 2 mistakes
+# 0 pts for anything else
+```
+
+
+
+
+
+
+

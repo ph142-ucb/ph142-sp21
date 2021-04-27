@@ -1,0 +1,140 @@
+---
+title: "PH 142 Quiz 5 Spring 2021"
+author: "Your name here"
+output: word_document
+---
+
+## Instructions
+Return via email as a Word document to ph142@berkeley.edu. Do not handwrite your answers or convert to a PDF. Please highlight your answer(s) for any multiple choice questions and type your answer where indicated for short answer or fill in the blank questions.
+
+### Question 1
+**The annual global average of deaths from unprovoked shark bites is 4 deaths per year.** <p>
+\
+**(i) What distribution would be best to model this rare event? (1 point)** <p>
+
+(a) Binomial <p>
+(b) Normal <p>
+(c) Poisson <p>
+\
+
+```{r eval=FALSE, include=FALSE}
+#**Solution**: (c) Poisson 
+```
+
+**(ii) What are the mean and standard deviation of this distribution? (Assume units of deaths/year for both) (1 point)** <p>
+
+(a) mean = 4; sd = 4 <p>
+(b) mean = 16; sd = 16 <p>
+(c) mean = 2; sd = 4 <p>
+(d) mean = 4; sd = 16 <p>
+(e) mean = 4; sd = 2 <p>
+(f) mean = 16; sd = 4 <p>
+(g) mean = 2; sd = 2 <p>
+\
+```{r eval=FALSE, include=FALSE}
+#**Solution**: (e) mean = 4; sd = 2
+```
+
+**(iii) Which of the below equations will correctly calculate the probability of 6 unprovoked shark bite fatalities in a single year? (1 point)** <p>
+
+(a) $P(X = 6) = \frac{e^{-6}6^4}{4!}$ <p>
+(b) $P(X \geq 6) = \frac{e^{-4}4^6}{6!}$ <p>
+(c) $P(X \geq 6) = \frac{e^{-2}2^6}{6!}$ <p>
+(d) $P(X = 6) = \frac{e^{-4}4^6}{6!}$ <p>
+(e) $P(X \leq 6) = \frac{e^{-6}6^4}{4!}$ <p>
+(f) $P(X = 6) = \frac{e^{-6}6^2}{2!}$ <p>
+\
+```{r eval=FALSE, include=FALSE}
+#**Solution**: (d) $P(X = 6) = \frac{e^{-4}4^6}{6!}$ 
+```
+
+**(iv) Which line of `R` code below will correctly calculate the probability of 6 unprovoked shark bite fatalities in a single year? (1 point)** <p>
+
+(a) `ppois(q = 6, lambda = 4, lower.tail = FALSE)` <p>
+(b) `dpois(x = 6, lambda = 4)` <p>
+(c) `ppois(q = 4, lambda = 6)` <p>
+(d) `1 - dpois(x = 6, lambda = 4)` <p>
+(e) `1 - ppois(q = 6, lambda = 4)` <p>
+(f) `1 - dpois(q = 4, lambda = 6, lower.tail = FALSE)` <p>
+
+```{r eval=FALSE, include=FALSE}
+#**Solution**: (b) `dpois(x = 6, lambda = 4)` 
+```
+\
+**(v) Which of the following expressions represents the probability of no more than 1 unprovoked shark bite fatalities in a single year? (1 point)** <p>
+
+(a) $P(X = 1)$ <p>
+(b) $1 - [P(X = 0) * P(X = 1)]$ <p>
+(c) $P(X = 0) + P(X = 1)$ <p>
+(d) $P(X = 0)$ <p>
+(e) $1 - [P(X = 0) + P(X = 1)]$ <p>
+(f) $P(X = 0) * P(X = 1)$ <p>
+(g) $1 - P(X = 0)$ <p>
+
+```{r eval=FALSE, include=FALSE}
+#**Solution**: (c) $P(X = 0) + P(X = 1)$
+```
+
+### Question 2
+**For the next few questions, choose the answer that best replaces the corresponding blank space in the following sentence:** <p>
+
+**The Central Limit Theorem ensures that the _____(i)_____ distribution of the sample mean is _____(ii)_____ as the _____(iii)_____ increases with mean _____(iv)_____ and standard deviation _____(v)_____.** <p>
+
+**(i) (1 point):** <p>
+
+(a) population <p>
+(b) sample <p>
+(c) sampling <p>
+(d) Normal <p>
+\
+```{r eval=FALSE, include=FALSE}
+#**Solution**: (c) sampling
+```
+
+**(ii) (1 point):** <p>
+
+(a) Binomial <p>
+(b) approximately Binomial <p>
+(c) Normal <p>
+(d) approximately Normal <p>
+
+```{r eval=FALSE, include=FALSE}
+#**Solution**: (d) approximately Normal
+```
+\
+**(iii) (1 point):** <p>
+
+(a) sample size <p>
+(b) number of samples <p>
+(c) sample mean <p>
+(d) population mean <p>
+
+```{r eval=FALSE, include=FALSE}
+#**Solution**: (a) sample size
+```
+\
+**(iv) (1 point):** <p>
+
+(a) $\mu$ <p>
+(b) $\bar{x}$ <p>
+(c) $\bar{X}$ <p>
+(d) $x$ <p>
+(e) $\sqrt{\mu}$ <p>
+(f) $X$ <p>
+
+```{r eval=FALSE, include=FALSE}
+#**Solution**: (a) $\mu$
+```
+\
+**(v) (1 point):** <p>
+
+(a) $\sigma$ <p>
+(b) $\frac{\sigma}{n}$ <p>
+(c) $\frac{\sigma}{\sqrt{n}}$ <p>
+(d) $\sigma^2$ <p>
+(e) $\frac{\sigma^2}{n}$ <p>
+(f) $\frac{\sigma^2}{\sqrt{n}}$ <p>
+
+```{r eval=FALSE, include=FALSE}
+#**Solution**: (c) $\frac{\sigma}{\sqrt{n}}$
+```

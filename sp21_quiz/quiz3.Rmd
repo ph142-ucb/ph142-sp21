@@ -1,0 +1,131 @@
+---
+title: "Quiz 3"
+author: "Andrew Liu"
+output: word_document
+---
+
+```{r, include = F}
+knitr::opts_chunk$set(include = F, echo = F)
+```
+
+
+### Question 1 [1 point]
+
+**If P(A|B) = P(A) is true then which of the following statements are true? (1 point)**
+
+I. P(B|A) = P(B) is true
+II. P(A and B) = P(A) * P(B) is true
+
+\
+(a) only I is true \
+(b) only II is true \
+(c) both II and I are true \
+(d) neither I or II is true \
+
+\
+\
+
+```{r}
+#SOLUTION: both II and I are true
+```
+
+\newpage
+
+## Question 2 [1 point]
+
+**Imagine a new screening test is developed to predict whether or not a person has diabetes. Assume you have a population of 200 people of which you know 100 have diabetes and 100 do not. The test correctly detects 80 cases of diabetes and incorrectly detects 5 cases of diabetes. Calculate the PPV of this test, rounded to the nearest whole number with a percent sign (ie 8/10 = 80%):**
+\
+Your answer here:
+\
+
+```{r}
+#SOLUTION: 94%
+```
+
+\newpage
+## Question 3 [1 points]
+
+**iThe 2020 Summer Olympics have been postponed to 2021. In preparation, the International Olympic Committee wants a screening test that will correctly identify a high proportion of athletes who use illegal performance enhancing drugs. On the other hand, the athletes are concerned about a screening test that will incorrectly identify persons as using illegal performance-enhancing drugs when, in fact, they are not using them. Which of the following screening test characteristics are important to each group? (1 point)**
+
+\
+(a) High sensitivity for Olympic officials and high specificity for athletes \
+(b) High specificity for Olympic officials and high sensitivity for athletes \
+(c) High positive predictive value for Olympic officials and high sensitivity for athletes \
+(d) High specificity for Olympic officials and high predictive value negative for athletes \
+
+\
+\
+
+
+```{r}
+#SOLUTION: High sensitivity for Olympic officials and high specificity for athletes
+```
+\newpage
+## Question 4 [1 point]
+**4) True or False. A high sensitivity does not necessarily correspond to a high PPV. (1 point)** 
+\
+(a) true \
+(b) false \
+
+\
+
+```{r}
+#SOLUTION: true
+```
+
+\newpage
+
+## Question 5 [1 point]
+
+**5) **What function would you use to calculate how much of your assumed normal distribution (in percentages) is below a specific value. For example: given a mean of 5 and an SD of two, what function would you use to calculate how much of your distribution lies from - ∞ to 3.5?**
+\
+
+```{r}
+#Solution: pnorm()
+```
+
+\
+\ 
+Your answer here:
+\
+
+\newpage
+
+## Question 6 [2 points]
+
+**Imagine we sample a random set of undergraduate students and obtain the following data.**
+
+**i) What is the complement of the union of C and B?
+Round to the nearest whole number with a percent sign (ie 8/10 = 80%):**
+\
+your answer here:
+\
+```{r}
+#Solution: 13%
+```
+
+**ii) what is the probability of being a coffee drinker and NOT an individual who regularly eats breakfast?  Round to the nearest whole number with a percent sign (ie 8/10 = 80%):**
+\
+your answer here:
+\
+```{r}
+#Solution: 25%
+```
+
+
+\newpage
+
+## Question 7 [1 point]
+
+**When disease prevalence in a population increases which of the following is true?**
+\
+(a) Sensitivity increases \
+(b) Specificity increases \
+(c) Positive predictive value increases \
+(d) Negative predictive value increases \
+
+\
+\
+```{r}
+#Solution: Positive predictive value increases
+```

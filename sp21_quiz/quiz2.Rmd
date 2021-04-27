@@ -1,0 +1,116 @@
+---
+title: "Quiz 2"
+author: "Name and Student ID"
+output: word_document
+---
+
+```{r, include = F}
+knitr::opts_chunk$set(include = F, echo = F)
+```
+
+
+## Question 1 [2pt]
+**Suppose we have a dataset called `covid_data` that collects demographic information as well as COVID cases on every county in US. What does the following code chunk return? (2 points)** <p>
+\
+\
+
+`five_num_summary1 <- covid_data %>% summarize(min = min(num_unemployed), Q1 = quantile(num_unemployed, 0.25), median = median(num_unemployed), Q3 = quantile(num_unemployed, 0.75), max = max(num_unemployed)) five_num_summary1` <p>
+\
+\
+
+(a)  returns only the median and first quartile of the number unemployed for the entire data set <p>
+(b) returns only the median and mode of the number unemployed for the data set containing only California counties <p>
+(c) returns the minimum, maximum, median, first quartile, and third quartile of the number unemployed for the entire data set <p>
+(d) returns the minimum, maximum, median, first quartile, and third quartile of the number unemployed for the data set containing only California counties <p>
+
+```{r eval=FALSE, include=FALSE}
+#**Solution**: C. With the `summarize()` function, the minimum, median, max, and 1st/3rd quartiles are found. Since the variable used is `num_unemployed`, the code chunk returns the five number summary for the number unemployed for the entire dataset.
+```
+
+
+\newpage
+
+## Question 2 
+**Which of the following is/are measure(s) of centrality? Which of the following is/are measure(s) of spread? Note: not all items have to be used. (2 points)** <p>
+\
+\
+
+**Mean, Standard deviation, Median, Inter-quartile range, Pearson's Correlation.** <p>
+\
+\
+
+Centrality:\
+Spread:\
+```{r eval=FALSE, include=FALSE}
+#SOLUTION: 
+# Centrality: Mean, Median,
+# Spread:     Standard deviation, Inter-quartile range.
+
+# 0.5 point for each measure; If Pearson's correlation is used then 0.5 should be dropped
+```
+
+\newpage
+## Question 3 [1 point]
+
+**True or false. We can use Pearson's correlation to quantify the relationship between two variables when our scatter plot shows the data points are located around a quadratic curve.** <p>
+\
+\
+
+(a) True <p>
+(b) False <p>
+
+```{r eval=FALSE, include=FALSE}
+#SOLUTION: 
+# False. Pearson's Correlation is only for linear relation.
+
+# 1 point
+```
+
+\newpage
+
+### Question 4 [5 points]
+**You are given data of asthma-related illnesses (stored in data frame `asthma_fire`) collected from areas that have experience fires with differing frequencies. We are interested in the effect of smoke frequency (in times per month, stored in variable `smoke_frequency`) on the severity of asthma-related illnesses. The asthma severity is measured by FEV1 (stored in variable `FEV1`), a variable that describes a person's lung health as a percentage (ie. a value of 100 denotes 100%, perfect lung functioning)** <p>
+\
+\
+
+**i) R: Create a linear model object (stored as `fitted_model`) to quantify the relationship between `smoke_frequency` and `FEV1`. Make sure to include a line to print the output of the model. Load any packages that are required.** <p>
+\
+\
+Your answer here:
+\
+\
+
+
+**ii) Interpretation: You run `glance(fitted_model)` and find the r-squared value is 0.90. Select the correct interpretation of this r-squared value. (1 point) ** <p>
+
+(a) For every one unit increase in smoke frequency, there is a 0.90% increase in FEV1. <p>
+(b) There is a strong positive linear relationship between smoke frequency and FEV1.<p>
+(c) For every one unit change in FEV1, there is a 0.9 unit change in smoke frequency. <p>
+(d) Variation in smoke frequency accounts for about 90% of the variation in FEV1. <p>
+\
+\
+\
+
+
+**iii) Calculation: suppose the model we fitted is `y = -0.30*x + 47.7`. In 2019, the reported fire frequency in one area was 5 times per month. In 2020, there were 2 _fewer_ fires per month on average. What was the change in FEV1 from 2020 compared to 2019. Be sure to include the units of your answer (2 points)** <p>
+\
+\
+Your answer here:
+\
+\
+
+```{r eval=F,include=F}
+# Solution:
+# i)
+fitted_model <- lm(FEV1 ~ smoke_frequency, data = asthma_fire)
+tidy(seed_mod)
+
+# ii)
+# D. 90% of the variation in FEV1 is explained by variation in the
+#smoke frequency. 
+
+# iii)
+# 0.6% increase in lung health on average. 
+
+# 2 points for i), 1 points for ii), 1 point for iii)
+```

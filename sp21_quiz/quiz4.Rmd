@@ -1,0 +1,98 @@
+---
+title: "Quiz 4"
+author: "Your name here"
+output: word_document
+---
+
+```{r, include = F}
+knitr::opts_chunk$set(include = F, echo = F)
+```
+
+## Instructions
+
+Return via email as a Word document to ph142@berkeley.edu. Do not handwrite your answers or convert to a PDF. Please highlight your answer(s) for any multiple choice questions and type your answer where indicated for short answer or fill in the blank questions.
+
+### Question 1 [1 point]
+
+**Select all of the true statements about the Normal distribution.**
+
+(a) The mean $\mu$ can be any positive or negative number.  \
+(b) The standard deviation $\sigma$ can be any positive or negative number. \
+(c) The mean of a normal distribution $\neq$ to the median. \
+(d) Approximately 68% of the data fall within 2 standard deviations of the mean. \
+
+```{r}
+#SOLUTION: a
+```
+
+\newpage
+
+## Question 2 [2 points]
+
+**Write a line of code that outputs the z value from a Standard Normal distribution given that a randomly selected observation falls above z with a probability of 0.4.**
+
+\
+Your answer here:
+\
+
+```{r}
+#SOLUTION: qnorm(0.4, lower.tail = F)
+```
+
+\newpage
+## Question 3 [2 points]
+
+**Systolic blood pressure in adults varies according to a distribution that is approximately Normal with mean 122 mmHg and standard deviation 4. Write a line of code that outputs the probability that a randomly chosen adult has a systolic blood pressure of 118 mmHg or more.**
+
+\
+Your answer here:
+\
+
+
+```{r}
+#SOLUTION: pnorm(118, 122, 4, lower.tail = F)
+```
+\newpage
+## Question 4 [1 point]
+**1,000 adults are getting their second dose of the COVID-19 vaccine at a vaccine drive today. The doctors tell them there is a 40% chance that they will have some sort of reaction to the vaccine and a 60% chance they will have no reaction. The number of people that will have a reaction to the vaccine can be *approximated* by a Normal distribution. Calculate the standard deviation of this distribution and report it to two decimal places. (Note: this is merely an example and does not necessarily reflect the probability of a reaction from the vaccine.)** 
+\
+Your answer here:
+
+\
+
+```{r}
+#SOLUTION: 15.49
+```
+
+\newpage
+
+## Question 5 [4 point total]
+
+**There are 10 participants in a race. To move onto the semi-finals, a runner must cross the finish line within a given time limit. Each contestant has an equal chance (35%) of making this time limit.**
+
+### Question 5.1 [3 points]
+
+**Let X represent the number of people who cross the finish line within the time limit. Does X fit the assumptions of a binomial distribution? Why or why not?**
+\
+
+Your answer here:
+\
+
+```{r}
+# SOLUTION: X fits the assumptions of a binomial distribution because as stated in the problem, each runner has an equal chance of succeeding, each runner gets one outcome, and they are mutually exclusive. Each runner can either pass or not pass the time limit, and the runners are not racing against each other but against the clock.<p>
+
+# Rubric <p>
+# +1: each runner has an equal chance of succeeding <p>
+# +1: each runner gets one outcome, and they are mutually exclusive <p>
+# +1: two outcomes (pass or not pass the time limit) <p>
+```
+
+### Question 5.2 [1 point]
+**True or False? P(X ≥ 8) = 1 – P(X=7).**
+
+(a) True
+(b) False
+
+```{r}
+# **Solution**: False. This would only eliminate the probability of 7 people succeeding instead of eliminating the probabilities of all of the cases of 1, 2, 3, 4, 5, 6, and 7 people succeeding.<p>
+```

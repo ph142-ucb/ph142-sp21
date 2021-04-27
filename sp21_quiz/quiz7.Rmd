@@ -1,0 +1,148 @@
+---
+title: "PH 142 Quiz 7 Spring 2021"
+author: "Your name here"
+output: word_document
+---
+
+## Instructions
+Return via email as a Word document to ph142@berkeley.edu. Do not handwrite your answers or convert to a PDF. Please highlight your answer(s) for any multiple choice questions and type your answer where indicated for short answer or fill in the blank questions.
+
+```{r, include = F}
+knitr::opts_chunk$set(include = F, echo = F)
+```
+
+### Question 1 [1 point]
+True or False. The ANOVA test can help you determine which groups are different. <p>
+
+(a) True \
+(b) False 
+
+```{r}
+# **Solution**
+# False. This question tests knowledge about ANOVA and Tukey tests. The ANOVA test will only help you determine if there is a difference between any combination of the groups, but it cannot tell you which of the groups is actually different, the Tukey test is able to do this. <p>
+```
+
+\newpage
+
+### Question 2 [1 point]
+The null hypothesis is that the mean difference between COVID-19 case rates between states of high population density and states of low population density is the same. <p>
+
+
+True or False: As the mean difference between case rates in states of high population density and states of low population density increases, the t-statistic increases as well. <p>
+(Assume the sample size and all else remains the same) <p>
+
+(a) True \
+(b) False
+
+```{r}
+# **Solution**
+# True. As both n and mean difference increase, the value of the t-statistic will increase as well.<p>
+```
+
+\newpage
+
+### Question 3 [2 points total]
+
+You have a dataset `breast_cancer` from a simple random sample of individuals with breast tumors. The `diagnosis` column takes characters, of either value `M` or `B`. `M` indicates that the specific tumor is malignant, while `B` indicates the tumor is benign. The `radius` column is the distance from the center of the tumor to the perimeter. <p>
+
+#### Question 3.1 [1 point]
+In order to determine if the mean radius of the benign and malignant groups is different, what test should we perform? Select one.
+
+(a) z-test  \
+(b) two-sample paired t-test  \
+(c) two-sample unpaired t-test  \
+(d) ANOVA  \
+
+```{r}
+# **Solution**
+# C, we are interested in comparing the means of the benign and malignant tumor groups, in order to identify a potential difference. <p>
+```
+
+
+#### Question 3.2 [1 point]
+Write *one* line of R code that will perform the above test. \
+\
+\
+Your answer here: \
+\
+\
+
+```{r}
+# **Solution**
+# t.test(radius ~ diagnosis, data = breast_cancer) or t.test(breast_cancer$radius ~ breast_cancer$diagnosis)
+
+# Check for other correct answers too. There may be slightly # different things that would give the same result.
+```
+ 
+\newpage
+
+### Question 4 [1 point]
+You collect data from students attending UC Berkeley and living at International House on which country they were born in and their cortisol levels, an indicator for stress levels, at the start of the semester. You find 19 students who were born in the US had mean cortisol level of 5 ug/dl, 23 students who were born in China had mean cortisol level of 15 ug/dl, and 17 students who were born in Korea had mean cortisol level of 16 ug/dl. Select one of the following that would cause the test statistic F to **increase**.
+
+(a) You collect more data so that your sample now has more students born in each country, but the new data does not change the mean or standard deviation within the group of students from each country.  \
+
+(b) When you retested the cortisol levels, you find that the mean cortisol levels are now 7 ug/dl, 9 ug/dl, and 7 ug/dl for students born in US, China, and Korea respectively. The standard deviations within each group stayed the same.  \
+
+(c) When you retested the cortisol levels, you find that the mean cortisol levels stayed the same but the standard deviations within each group increased. 
+
+(d) A semester later, some students went back to their hometown and you are no longer able to test their cortisol levels. The number of students in your sample decreased. You find that the mean stayed the same but the standard deviation doubled. \
+
+(e) None of the above \
+
+```{r}
+# **Solution** 
+# A, because if the number of students increases, you have more evidence. Your test
+# statistic increases. <p>
+```
+
+\newpage
+
+## Question 5 [5 points total]
+15 people were enrolled in a program to quit smoking for 3 months. We want to know whether this program had an impact on people's weights. We have the weights for each person at the start and at the end of the program. 
+
+### Question 5.1 [1 point]
+What are the null and alternative hypotheses for this test? Select one.
+
+(a) $H_0: \mu_{end} - \mu_{start} = 0$ <p>
+    $H_A: \mu_{end} - \mu_{start} < 0$ <p>
+(b) $H_0: \mu_{end} - \mu_{start} = 0$ <p>
+    $H_A: \mu_{end} - \mu_{start} \neq 0$ <p>
+(c) $H_0: \mu_{end} \neq \mu_{start}$ <p>
+    $H_A: \mu_{end} = \mu_{start}$ <p>
+(d) $H_0: \mu_{end} = \mu_{start}$ <p>
+    $H_A: \mu_{end} > \mu_{start}$ <p>
+ 
+```{r}
+# **Solution**: B <p>
+```
+
+
+### Question 5.2 [2 points]
+Which of the following assumptions must we make in order to proceed with this test? Select all that apply.
+
+(a) The observations from the two groups are independent of each other. <p>
+
+(b) The dependent variable is approximately Normally distributed. <p>
+
+(c) The dependent variable does not contain significant outliers. <p>
+
+(d) Sample is a random sample from the population. <p>
+
+```{r}
+# Solution: B, C, D
+```
+
+
+### Question 5.3 [2 points]
+We have a data frame called `weights` with each row representing each person in the smoking cessation program. The `start` column contains the weights at the start of the program and the `end` column contains the weights at the end of the program. Suppose we wanted to proceed with the test. Which line of code will run the test in R? Select all that apply. 
+
+(a) `t.test(weights$start ~ weights$end, paired = T)` <p>
+(b) `t.test(weights %>% pull(start), weights %>% pull(end))` <p>
+(c) `t.test(weights$start, weights$end, paired = T)` <p>
+(d) `t.test(weights %>% pull(start), weights %>% pull(end), paired = T)` <p>
+
+```{r}
+# Solution: C and D
+```
+
+

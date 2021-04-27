@@ -1,0 +1,183 @@
+---
+title: "PH 142 Quiz 9 Spring 2021"
+author: "Your name here"
+output: word_document
+---
+
+## Instructions
+Return via email as a Word document to ph142@berkeley.edu. Do not handwrite your answers or convert to a PDF. Please highlight your answer(s) for any multiple choice questions and type your answer where indicated for short answer or fill in the blank questions.
+
+```{r, include = F}
+knitr::opts_chunk$set(include = F, echo = F)
+```
+
+### Question 1 [6 points total]
+
+#### Question 1.1 [1 point]
+In which of the following scenarios would the large sample method **not** give as reliable a confidence interval as another method? Select all that apply. \
+
+(a) You are interested in comparing the proportion of a rare gene mutation in women to men. You have a sample of 100 people in each group. 2 of the women have the mutation and 5 of the men. \
+
+(b) You are interested in comparing the proportion of rainy days in San Francisco, CA to Los Angeles, CA in 2020. There were 72 days of rain in San Francisco and 33 in Los Angeles. \
+
+(c) You are interested in comparing the proportion of men in South Africa who have been tested for HIV in the last year compared to the proportion of women. Approximately 6% of the men received an HIV test and 35% of women. \
+
+(d) You are interested in seeing if the proportion of Berkeley students who own cats is equal to the proportion of Berkeley students who own dogs. You sample a group of 30 students, approximately 10% own cats. You sample another group of 30 students, approximately 40% own dogs.
+
+```{r}
+# SOLUTION: A, D
+```
+
+#### Question 1.2 [1 point]
+Select the 95% confidence interval the Plus 4 method would yield from scenario A above (the rare gene mutation). Round to 3 decimal places but don't round until you have completed all of your calculations. The null hypothesis for this question is $p_W - p_M = 0$ where $p_W$ is the proportion of women with the mutation and $p_M$ is the proportion of men. \
+
+(a) (-0.080, 0.020) \
+(b) (-0.086, 0.027) \
+(b) (-0.076, 0.018) \
+(c) (-0.107, 0.049)
+
+```{r}
+# SOLUTION: B
+
+# p_w <- 3/102
+# p_m <- 6/102
+# 
+# p_tilde <- p_w - p_m
+# 
+# se <- sqrt((p_w*(1-p_w)/102) + (p_m*(1-p_m)/102))
+# p_tilde - 1.96*se #-0.086
+# p_tilde + 1.96*se #0.027
+```
+
+#### Question 1.3 [2 points]
+Interpret the confidence interval you chose above in the context of the problem. Following that, decide whether you reject or fail to reject the null hypothesis started in 1.2.
+
+\
+\
+Confidence interval interpretation: \
+\
+\
+
+(a) Reject the null \
+(b) Failt to reject the null
+
+
+```{r}
+# **Solution**
+#The confidence interval is (-0.086, 0.027). If we were to repeat this sampling process 100 times, we would expect 95% of them to contain the true value of the difference in proportion of the rare gene mutation in women and men. In this case, we fail to reject the null hypothesis since 0% is contained in the interval.
+
+#+1 for correct interp
+#+1 for correct decision 
+
+# full credit for correct interpretation of wrong proportion selected above.
+```
+
+#### Question 1.4 [2 points]
+Continuing on, let the alternative hypothesis for the rare gene mutation example be that there the proportion of women in the population with the gene mutation is less than the proportion of men in the population with the mutation. \
+Write code to conduct this test and report the p-value rounded to 2 decimal places.
+
+\
+\
+Your code here: \
+\
+\
+Your p-value here: \
+\
+\
+
+```{r}
+# SOLUTION: prop.test(x = c(2, 5), n = c(100,100), alternative = "less")
+#p-value: 0.2208
+
+#Note: if continuity correct used (which is fine), p-value is 0.1242
+```
+
+
+
+
+
+\newpage
+
+### Question 2 [1 point]
+
+Having extremely dense breast tissue is one of several risk factors for cancer. The risk for people with extremely dense breast tissue for developing breast cancer has been estimated to be up to 3 times higher than women with mostly fatty breasts ie. $\frac{P(BC \mid D)}{P(BC \mid D')} = 3$. This is an example of a/an
+
+(a) odds ratio \
+(b) risk difference \
+(c) risk ratio \
+(d) odds difference
+
+
+```{r}
+# SOLUTION: C
+```
+
+
+\newpage
+
+### Question 3 [3 points total]
+
+Systemic racism is a public health problem. There is evidence to show that people of color are incarcerated at a higher frequency and with harsher sentences than white people who have committed the same crime. We will see if the distribution of race/ethnicity in California matches the distribution of the prison population in California.
+
+#### Question 3.1 [1 point]
+As of 2017, California was incarcerating 115,000 people. The distribution of race/ethnicity in California is as follows: 
+
+- 39.3% Hispanic
+- 36.6% White
+- 5.8% Black or African American
+- 18.3% AAPI, race/ethnicity not listed, multiple identities (note: for brevity, we will refer to this category as "Other" because statistics for these groups are not reported for the larger prison population)
+
+What are the expected values of the prison population in California for each group? Report them in the same order as they are listed above.
+
+Hispanic: \
+White: \
+Black/African American: \
+Other: \
+
+```{r}
+# **Solution**
+# Hispanic:45,195
+# white:42090
+# Black/African American:6670
+# Other: 21045
+```
+
+
+#### Question 3.2 [1 point]
+
+Below is the approximate number of individuals in each category incarcerated in California.
+
+- Hispanic: 50,715 \
+- White: 24,150 \
+- Black: 32,545 \
+- Other: 7,590 \
+
+Which group contributes most to the chi-square test statistic? \
+
+(a) Hispanic \
+(b) White \
+(c) Black \
+(d) Other
+```{r}
+# **Solution: C
+```
+ 
+ 
+#### Question 3.3 [1 point]
+
+Say you stored the value of the test statistic in an object called `chi_res`. Write one line of code that you could use to calculate the p-value for this hypothesis test.
+
+\
+\
+Your answer here:\
+\
+\
+
+
+```{r}
+# SOLUTION: pchisq(chi_sq, df = 3, lower.tail = F)
+
+# fun fact: chi_sq value is 111421.2 and p-value is 0. (obvi)
+```
+
+

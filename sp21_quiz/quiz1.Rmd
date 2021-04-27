@@ -1,0 +1,160 @@
+---
+title: "Quiz 1"
+author: "Name and Student ID"
+output: word_document
+---
+
+```{r, include = F}
+knitr::opts_chunk$set(include = F, echo = F)
+```
+
+
+### Question 1 [3 points]
+
+**Classify the following problems as "descriptive", "causative/etiologic", or "predictive"**
+\
+
+**i) [1 point] 1000 patients are given either the Moderna or Pfizer COVID-19 vaccine. Which is more effective after 6 months?**
+\
+(a) Descriptive \
+(b) Causative \
+(c) Predictive \
+
+\
+\
+
+```{r}
+#SOLUTION: causative
+```
+
+
+**ii) [1 point] 500 HIV positive people are treated with anti-retroviral therapy (ART). What is their expected CD4 count after 12 months? **
+
+Note: CD4 count refers to the number of a type of white blood cell (T-cells) a person has at a given time and is used as a marker for viral burden in HIV+ folks.
+\
+(a) Descriptive \
+(b) Causative \
+(c) Predictive \
+
+\
+\
+
+```{r}
+#SOLUTION: predictive
+```
+
+**iii) [1 point] The county public health department is typing up the annual report and wants to know if the prevalence of STIs this year was higher than last year.**
+\
+(a) Descriptive \
+(b) Causative \
+(c) Predictive \
+
+\
+\
+```{r}
+#SOLUTION: descriptive
+```
+
+\newpage
+
+## Question 2 [1 point]
+
+**What does PPDAC stand for?**
+\
+P:\
+P:\
+D:\
+A:\
+C:\
+\
+
+```{r}
+#SOLUTION: Problem, Plan, Data, Analysis, Conclusion
+#.2 points each
+```
+
+\newpage
+## Question 3 [3 points]
+
+**i) [1 point] You are given a dataset called `covid_data` with demographic information on every county in California including population (`population`) and the number of individuals who are unemployed (`num_unempl`). Fill in the blanks in the following code snippet to add a variable called `rate_unempl` to the *current* dataset.**
+
+`______A________ <- ______B________ %>% _______C________ (________D________ = num_unempl/population)`
+
+```{r}
+#SOLUTION: covid_data, covid_data, mutate, rate_unempl
+#1/4 point for each correct response. no marks off for spelling
+```
+\
+First blank (A) :\
+Second blank (B) : \
+Third blank (C) : \
+Fourth blank (D) : \
+\
+**ii) [1 point] Your PI is only interested in investigating counties in the Bay Area. What function would you use to only include data from these counties?** 
+\
+(a) select() \
+(b) filter() \
+(c) summarize() \
+(d) group_by() \
+(e) none of these.
+
+```{r}
+#SOLUTION: filter()
+```
+\
+\
+
+**iii) [1 point] You need to tell your PI how many rows and columns are left after choosing Bay Area counties and adding the unemployment rate. What *single* function can you use to show them the number of rows and columns?** \
+
+\
+\
+Your answer here:
+\
+
+```{r}
+#SOLUTION: dim(), str() would also work, maybe others?
+```
+
+\newpage
+
+## Question 4 [3 points]
+
+**i) [2 points] Write code to recreate the following plot that depicts the magnitude of earthquakes off the coast of Fiji since 1964. Be sure to include the title and axes labels. The dataset is called `quakes` and the magnitude variable is called `mag`. You may assume the ggplot2 library is loaded.**
+
+```{r, include = T, echo = F, warning=F, message=F}
+library(ggplot2)
+ggplot(data = quakes, aes(x = mag)) +
+  geom_histogram(col = "white") +
+  labs(title = "Earthquake Magnitude in Fiji since 1964",
+       x = "Magnitude",
+       y = "Frequency")
+```
+
+```{r}
+#Suggested Rubric:
+# +2: Everything correct
+# +1.5: Forgot x/y axes OR title, or minor mistakes
+# +1: Forgot x/y axes AND title, or more mistakes
+# 0.5: Many mistakes
+# 0: Blank, very incorrect
+
+#can forget color = "white"
+```
+
+\
+\ 
+Your answer here:
+\
+\
+
+**ii) [1 point] What kind of variable is magnitude? Select all that apply.** \
+\
+(a) numeric \
+(b) continuous \
+(c) discrete \
+(d) nominal
+
+```{r}
+#SOLUTION: numeric, continuous
+```
+

@@ -1,0 +1,122 @@
+---
+title: "PH 142 Quiz 8 Spring 2021"
+author: "Your name here"
+output: word_document
+---
+
+## Instructions
+Return via email as a Word document to ph142@berkeley.edu. Do not handwrite your answers or convert to a PDF. Please highlight your answer(s) for any multiple choice questions and type your answer where indicated for short answer or fill in the blank questions.
+
+```{r, include = F}
+knitr::opts_chunk$set(include = F, echo = F)
+```
+
+### Question 1
+A recent study assessed the effectiveness of a new drug for children with severe asthma. A total of 10 children with asthma enrolled in the study. The number of asthma attacks that each child has during a 5 day observation period are measured both before and after taking the new medication for two weeks. Below is the data collected in a table called asthma_data. (2 points) <p>
+
+i) Based on the study description, which nonparametric test is most appropriate for analyzing the data shown above? <p>
+(a) Kruskal Wallis <p>
+(b) Wilcoxon Rank-Sum <p>
+(c) Wilcoxon Sign-Rank <p>
+
+```{r}
+# SOLUTION: C
+```
+
+
+ii) Write a line of R code to analyze the data using the test you chose for Question 1.1. Use any or all of the following variable names and/or dataset name in your code: "before_group", "after_group", "asthma_data". Hint: The pull( ) function may be helpful.
+
+\
+\
+Your answer here:
+\
+\
+
+```{r}
+#**Solution**: wilcox.test(asthma_data %>% pull(before_group), asthma_data %>% pull(after_group), paired=T, correct = F)
+```
+
+
+### Question 2
+In what circumstances would you choose to conduct a nonparametric test instead of parametric test? Provide exactly 2 reasons. (2 points) <p>
+\
+\
+Your answer here: \
+\
+\
+
+```{r}
+#**Solution**:
+# They do not use means or standard deviations
+# Use a ranking of the data instead of actual values
+# Do not assume a normal distribution of the data
+# Less sensitive to outliers and skewed data
+# Do not need a large sample size <p>
+```
+
+### Question 3
+This question draws upon the lecture example about the relationship between the number of registered powerboats and the number of manatee deaths in Florida between 1977 and 2016.
+
+i) Calculate the upper and lower bound for the 95% confidence interval of a coefficient from a regression analysis of the relationship between powerboat purchases and manatee deaths.  Use the following outputs from R in your calculations. Round to 2 decimal places. (1 point) <p>
+
+(a) (0.13, 0.17) <p>
+(b) (0.11, 0.14) <p>
+(b) (0.12, 0.15) <p>
+
+```{r}
+# SOLUTION C
+```
+
+
+ii) Select the correct null and alternative hypothesis for the regression model shown above. (2 points) <p>
+
+(a) Null: There is no association between powerboat purchases and manatee deaths.<p>
+(b) Alternative: There is an association between powerboat purchases and manatee deaths. <p>
+(c) Alternative: There is no association between powerboat purchases and manatee deaths. <p>
+(d) Null: There is an association between powerboat purchases and manatee deaths.<p>
+
+
+```{r}
+# SOLUTION: A, B
+```
+
+### Question 4
+Historically, 13.7% of adolescents in California The figure below shows four 95% confidence intervals for the proportion of surveyed adolescents that had used e-cigarettes. (3 points) <p>
+
+
+i) Consider a SRS of 199 adolescents in California, where 37 adolescents had used e-cigarettes. Calculate the standard error of the sampling distribution under the null hypothesis.  (1 point) <p>
+
+\
+\
+Your answer here: \
+\
+
+```{r}
+#**Solution**: 0.024 <p>
+```
+
+
+ii) Calculate the z-test for the proportion. Round your answer to two decimal places. (1 point) <p>
+
+\
+\
+Your answer here: \
+\
+
+
+```{r}
+# SOLUTIOn: -1.75 <p>
+
+```
+
+iii) Write a line of R code to calculate the probability of seeing a z-value of this magnitude or larger. (1 point) <p>
+\
+\
+Your answer here: \
+\
+
+
+```{r}
+#**Solution**: pnorm(q = -1.75, lower.tail = F)
+```
+
